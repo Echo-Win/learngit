@@ -1,0 +1,22 @@
+git config --global user.name ""
+git config --global user.email ""
+git config --global -l
+生成公钥私钥
+ssh-keygen -t rsa -C "email"
+
+给GitHub添加公钥
+点击头像 --》 setings --》ssh and GPG keys --》New SSH key
+把id_rsa.pub 里面的内容复制进去
+
+验证是否成功
+ssh -T git@github.com
+
+查看远程仓库
+git remote -v
+
+安装
+YouCompleteMe 下载后不会直接运行需要安装
+cd ~/.vim/plugged/YouCompleteMe
+python3 install.py
+没有CMake 用命令 sudo apt-get install CMake
+
